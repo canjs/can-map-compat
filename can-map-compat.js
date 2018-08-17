@@ -1,3 +1,4 @@
+var canKey = require("can-key");
 var canReflect = require("can-reflect");
 var canLog = require("can-log");
 
@@ -36,11 +37,11 @@ function makeCompat(Type, enableWarning) {
 		}
 		// map.attr(key)
 		else if(argsLen === 1) {
-			return canReflect.getKeyValue(this, key);
+			return canKey.get(this, key);
 		}
 		// map.attr(key, val)
 		else {
-			canReflect.setKeyValue(this, key, value);
+			canKey.set(this, key, value);
 			return this;
 		}
 	};
