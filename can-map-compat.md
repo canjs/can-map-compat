@@ -1,6 +1,6 @@
 @module {function} can-map-compat
-@parent can-js-utilities
-@collection can-legacy
+@parent can-observables
+@collection can-ecosystem
 @package ./package.json
 @signature `makeMapCompat(Type)`
 
