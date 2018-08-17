@@ -14,7 +14,7 @@ function makeCompat(Type, enableWarning) {
 
 	proto.attr = function(key, value) {
 		if(warnOnUse) {
-			canLog.warn("can-map-compat is intended for migrating away from can-map. Remove all uses of .attr() to remove this warning.")
+			canLog.warn("can-map-compat is intended for migrating away from can-map. Remove all uses of .attr() to remove this warning.");
 		}
 
 		var type = typeof key;
