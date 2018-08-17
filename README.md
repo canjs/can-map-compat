@@ -1,6 +1,6 @@
 # can-map-compat
 
-[![Build Status](https://travis-ci.org/canjs/can-map-compat.svg?branch=master)](https://travis-ci.org/canjs/can-map-compat)
+[![Build Status](https://travis-ci.com/canjs/can-map-compat.svg?branch=master)](https://travis-ci.org/canjs/can-map-compat)
 [![npm version](https://badge.fury.io/js/can-map-compat.svg)](http://badge.fury.io/js/can-map-compat)
 
 
