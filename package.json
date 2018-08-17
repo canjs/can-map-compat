@@ -13,7 +13,7 @@
     "url": "https://donejs.com/"
   },
   "scripts": {
-    "preversion": "npm test && npm run build",
+    "preversion": "npm test",
     "version": "git commit -am \"Update version number\"",
     "postpublish": "git push --tags && git push",
     "testee": "testee test.html --browsers firefox",
