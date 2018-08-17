@@ -1,6 +1,6 @@
 {
   "name": "can-map-compat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Makes observables compatible with can-map",
   "homepage": "https://canjs.com/",
   "repository": {
