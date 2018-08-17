@@ -14,6 +14,14 @@ function tests(typeName, createType) {
 		QUnit.equal(val, "bar", "get the value");
 	});
 
+	QUnit.test("map.attr() supports nested value", function() {
+		var Type = makeCompat(createType());
+		var map = new Type({ parent: { child: 1 }});
+
+		var val = map.attr("parent.child");
+		QUnit.equal(val, 1, "Got a nested prop");
+	});
+
 	QUnit.test("map.attr() gets unwrapped version", function() {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar", baz: "qux"});
@@ -46,6 +54,14 @@ function tests(typeName, createType) {
 
 		var val = map.attr("foo", "baz").attr("foo");
 		QUnit.equal(val, "baz", "value changed");
+	});
+
+	QUnit.test("map.attr(key, value) supports nested objects", function() {
+		var Type = makeCompat(createType());
+		var map  = new Type({ parent: { child: 1 }});
+
+		var val = map.attr("parent.child", 2).attr("parent.child");
+		QUnit.equal(val, 2, "Able to set nested values");
 	});
 
 	QUnit.module('can-map-compat - ' + typeName + ' .removeAttr()');
