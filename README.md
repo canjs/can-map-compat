@@ -5,11 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-map-compat/blob/master/LICENSE)
 [![npm version](https://badge.fury.io/js/can-map-compat.svg)](https://www.npmjs.com/package/can-map-compat)
 [![Travis build status](https://travis-ci.org/canjs/can-map-compat.svg?branch=master)](https://travis-ci.org/canjs/can-map-compat)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-map-compat?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-map-compat)
-[![Coverage status](https://coveralls.io/repos/github/canjs/can-map-compat/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-map-compat?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-map-compat.svg)](https://greenkeeper.io/)
 
-With StealJS, you can import this module directly in a template that is autorendered:
+Makes canjs observable type compatible with the can-map API, for easier migration.
 
 ## Documentation
 
