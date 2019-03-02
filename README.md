@@ -1,32 +1,28 @@
 # can-map-compat
 
-[![Build Status](https://travis-ci.com/canjs/can-map-compat.svg?branch=master)](https://travis-ci.org/canjs/can-map-compat)
-[![npm version](https://badge.fury.io/js/can-map-compat.svg)](http://badge.fury.io/js/can-map-compat)
-
-
-## Usage
-
-### ES6 use
+[![Join our Slack](https://img.shields.io/badge/slack-join%20chat-611f69.svg)](https://www.bitovi.com/community/slack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join our Discourse](https://img.shields.io/discourse/https/forums.bitovi.com/posts.svg)](https://forums.bitovi.com/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-map-compat/blob/master/LICENSE)
+[![npm version](https://badge.fury.io/js/can-map-compat.svg)](https://www.npmjs.com/package/can-map-compat)
+[![Travis build status](https://travis-ci.org/canjs/can-map-compat.svg?branch=master)](https://travis-ci.org/canjs/can-map-compat)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-map-compat?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-map-compat)
+[![Coverage status](https://coveralls.io/repos/github/canjs/can-map-compat/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-map-compat?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-map-compat.svg)](https://greenkeeper.io/)
 
 With StealJS, you can import this module directly in a template that is autorendered:
 
-```js
-import plugin from 'can-map-compat';
-```
+## Documentation
 
-### CommonJS use
+Read the [can-map-compat API docs on CanJS.com](https://canjs.com/doc/can-map-compat.html).
 
-Use `require` to load `can-map-compat` and everything else
-needed to create a template that uses `can-map-compat`:
+## Changelog
 
-```js
-var plugin = require("can-map-compat");
-```
+See the [latest releases on GitHub](https://github.com/canjs/can-map-compat/releases).
 
-### Standalone use
+## Contributing
 
-Load the `global` version of the plugin:
+The [contribution guide](https://github.com/canjs/can-map-compat/blob/master/CONTRIBUTING.md) has information on getting help, reporting bugs, developing locally, and more.
 
-```html
-<script src='./node_modules/can-map-compat/dist/global/can-map-compat.js'></script>
-```
+## License
+
+[MIT](https://github.com/canjs/can-map-compat/blob/master/LICENSE)
