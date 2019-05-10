@@ -6,73 +6,73 @@ var makeCompat = require('./can-map-compat').makeCompat;
 function tests(typeName, createType) {
 	QUnit.module('can-map-compat - ' + typeName + ' .attr()');
 
-	QUnit.test("map.attr(key) gets a value", function() {
+	QUnit.test("map.attr(key) gets a value", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar" });
 
 		var val = map.attr("foo");
-		QUnit.equal(val, "bar", "get the value");
+		assert.equal(val, "bar", "get the value");
 	});
 
-	QUnit.test("map.attr() supports nested value", function() {
+	QUnit.test("map.attr() supports nested value", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ parent: { child: 1 }});
 
 		var val = map.attr("parent.child");
-		QUnit.equal(val, 1, "Got a nested prop");
+		assert.equal(val, 1, "Got a nested prop");
 	});
 
-	QUnit.test("map.attr() gets unwrapped version", function() {
+	QUnit.test("map.attr() gets unwrapped version", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar", baz: "qux"});
 
 		var obj = map.attr();
-		QUnit.deepEqual(obj, { foo: "bar", baz: "qux"}, "Unwrapped correctly");
+		assert.deepEqual(obj, { foo: "bar", baz: "qux"}, "Unwrapped correctly");
 	});
 
-	QUnit.test("map.attr({key:val}) does an assign", function() {
+	QUnit.test("map.attr({key:val}) does an assign", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar" });
 
 		map.attr({ foo: "baz" });
 		var val = map.attr("foo");
-		QUnit.equal(val, "baz", "Value changed");
+		assert.equal(val, "baz", "Value changed");
 	});
 
-	QUnit.test("map.attr({key:val}, true) does an update", function() {
+	QUnit.test("map.attr({key:val}, true) does an update", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar", "baz": "qux" });
 
 		map.attr({ foo: "baz" }, true);
 		var val = map.attr();
-		QUnit.deepEqual(val, { foo: "baz" }, "Removed other vals");
+		assert.deepEqual(val, { foo: "baz" }, "Removed other vals");
 	});
 
-	QUnit.test("map.attr(key, value) sets a value", function() {
+	QUnit.test("map.attr(key, value) sets a value", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar" });
 
 		var val = map.attr("foo", "baz").attr("foo");
-		QUnit.equal(val, "baz", "value changed");
+		assert.equal(val, "baz", "value changed");
 	});
 
-	QUnit.test("map.attr(key, value) supports nested objects", function() {
+	QUnit.test("map.attr(key, value) supports nested objects", function(assert) {
 		var Type = makeCompat(createType());
 		var map  = new Type({ parent: { child: 1 }});
 
 		var val = map.attr("parent.child", 2).attr("parent.child");
-		QUnit.equal(val, 2, "Able to set nested values");
+		assert.equal(val, 2, "Able to set nested values");
 	});
 
 	QUnit.module('can-map-compat - ' + typeName + ' .removeAttr()');
 
-	QUnit.test("map.removeAttr(key) removes the key", function() {
+	QUnit.test("map.removeAttr(key) removes the key", function(assert) {
 		var Type = makeCompat(createType());
 		var map = new Type({ foo: "bar" });
 
 		var val = map.removeAttr("foo");
-		QUnit.equal(val, "bar", "got the removed value");
-		QUnit.deepEqual(map.attr(), {}, "No keys now");
+		assert.equal(val, "bar", "got the removed value");
+		assert.deepEqual(map.attr(), {}, "No keys now");
 	});
 }
 
