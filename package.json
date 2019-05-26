@@ -40,7 +40,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "can-key": "^1.2.0",
+    "can-key": "^1.2.1",
     "can-log": "^1.0.0",
     "can-reflect": "^1.17.4"
   }
