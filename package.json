@@ -35,8 +35,8 @@
     "can-observe": "^2.2.0",
     "jshint": "^2.9.1",
     "steal": "^2.0.0",
-    "steal-qunit": "^1.0.1",
-    "testee": "^0.9.0"
+    "steal-qunit": "^2.0.0",
+    "testee": "^0.9.1"
   },
   "license": "MIT",
   "dependencies": {
